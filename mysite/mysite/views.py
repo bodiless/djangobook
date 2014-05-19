@@ -5,3 +5,5 @@ def hello(request):
 
 def whatANight(request):
 	return HttpResponse("send me photo")
+
+def finalyy
