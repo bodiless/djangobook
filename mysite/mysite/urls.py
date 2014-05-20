@@ -15,6 +15,9 @@ urlpatterns = patterns('',
     url(r'^hello/$', hello),
     url(r'^hour/(\d{1})/', one_hour_ahead),
     url(r'^datetime/', current_datetime),
+    url(r'^for_loop/', for_loop),
+    url(r'^if_cond/', if_cond),
+	url(r'^if_equal/', if_equal),
 
 )
 

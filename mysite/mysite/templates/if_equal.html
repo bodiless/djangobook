@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{# This template uses ifequal condition #}
+{% block if_equal %}
+	{% ifequal check 'test' %}
+		<p> So this is check variable: <b> {{ check }} </b></p>
+	{% else %}
+		<p> Nothing there !</p>
+	{% endifequal %}
+{% endblock %}

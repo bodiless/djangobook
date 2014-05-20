@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block if_cond %}
+	{% if test %}
+		<p> {{ test }}</p>
+	{% else %}
+		<p> Nothing there </p>
+	{% endif %}
+{% endblock %}

@@ -1,13 +1,21 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{{ title }}{% endblock %}</title>
 </head>
 <body>
-    <h1>My helpful timestamp site</h1>
+{% comment %}
+So this is the comment block.
+Below are other templates to use.
+{% endcomment%}
+
+    <h1>My helpful timestamp site: {{ title }}</h1>
     {% block content %}{% endblock %}
     {% block footer %}
-    {% include 'datetime.html' %}
+    {% block datetime %} {% endblock %}
+ 	{% block for_loop %} {% endblock %}
+ 	{% block if_cond %} {% endblock %}
+    {% block if_equal %} {% endblock %}
     <hr>
     <p>Thanks for visiting my site.</p>
     {% endblock %}

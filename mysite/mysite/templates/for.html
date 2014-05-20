@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block for_loop %}
+<p>This is for loop</p>
+<ul>
+{% for item in item_list %}
+	<li> {{ item }} </li>
+{% endfor %}
+</ul>
+{% endblock %}

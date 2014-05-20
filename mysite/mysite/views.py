@@ -8,7 +8,7 @@ def hello(request):
 def index(request):
 	tmplt = get_template('base.html')
 	now = get_datetime()
-	html = tmplt.render(Context({'title': 'index.html', 'current_date': now}))
+	html = tmplt.render(Context({'title': 'asdf', 'current_date': now}))
 	return HttpResponse(html)
 
 def one_hour_ahead(request,offset):
@@ -30,3 +30,22 @@ def current_datetime(request):
 def get_datetime():
 	now = datetime.datetime.now()
 	return now
+
+def for_loop(request):
+	item_list = ("VM", "Honda", "Opel")
+	tmplt = get_template('for.html')
+	html = tmplt.render(Context({'item_list': item_list}))
+	return HttpResponse(html)
+
+def if_cond(request):
+	var = ""
+	tmplt = get_template('if_cond.html')
+	html = tmplt.render(Context({'test': var}))
+	return HttpResponse(html)
+
+def if_equal(request):
+	var = "test"
+	tmplt = get_template('if_equal.html')
+	html = tmplt.render(Context({'check': var}))
+	return HttpResponse(html)
+
