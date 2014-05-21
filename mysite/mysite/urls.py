@@ -3,6 +3,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 from mysite.views import *
+from books.views import *
 
 admin.autodiscover()
 
@@ -18,6 +19,8 @@ urlpatterns = patterns('',
     url(r'^for_loop/', for_loop),
     url(r'^if_cond/', if_cond),
 	url(r'^if_equal/', if_equal),
-
+    url(r'^get_meta/', get_meta),
+    url(r'^search_form', search_form),
+    url(r'^search', search),
 )
 

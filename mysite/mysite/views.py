@@ -2,6 +2,7 @@ from django.http import HttpResponse, Http404
 from django.template import Context
 from django.template.loader import get_template
 import datetime
+
 def hello(request):
 	return HttpResponse("Hello World!")
 
@@ -48,4 +49,13 @@ def if_equal(request):
 	tmplt = get_template('if_equal.html')
 	html = tmplt.render(Context({'check': var}))
 	return HttpResponse(html)
+
+def get_meta(request):
+	values = request.META.items()
+	values.sort()
+	html = []
+	for k,v in values:
+		html.append('<tr><td>%s</td><td>%s</td></tr>' % (k,v))
+	return HttpResponse('<table>%s</table>' % '\n'.join(html))
+
 
